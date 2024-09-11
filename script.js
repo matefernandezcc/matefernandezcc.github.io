@@ -1,71 +1,27 @@
-const noButton = document.getElementById('no-btn');
-const siButton = document.getElementById('si-btn');
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
+const question = document.querySelector(".question");
+const gif = document.querySelector(".gif");
 
-// Mover el botón "No" cuando el ratón pase sobre él
-noButton.addEventListener('mouseover', () => {
-    const randomX = Math.random() * (window.innerWidth - noButton.offsetWidth);
-    const randomY = Math.random() * (window.innerHeight - noButton.offsetHeight);
-
-    noButton.style.left = `${randomX}px`;
-    noButton.style.top = `${randomY}px`;
+// Change text and gif when the Yes button is clicked
+yesBtn.addEventListener("click", () => {
+  question.innerHTML = "Lo sabia 😇";
+  gif.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmZxOHZyOXNhZHdmMGt0dXNzd2xobzR4aTd0anR0Mmo2YzNxOWYzcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMVVnPqbKhnc3Fm/giphy.gif";
 });
 
-// Reemplazar el contenido con un gráfico de flores al hacer clic en "Sí"
-siButton.addEventListener('click', () => {
-    // Limpiar el contenido del body
-    document.body.innerHTML = '<canvas id="flowerCanvas"></canvas>';
+// Make the No button move randomly on hover
+noBtn.addEventListener("mouseover", () => {
+  const wrapper = document.querySelector(".wrapper");
+  const wrapperRect = wrapper.getBoundingClientRect();
+  const noBtnRect = noBtn.getBoundingClientRect();
 
-    // Obtener el contexto de dibujo de Chart.js
-    const ctx = document.getElementById('flowerCanvas').getContext('2d');
+  // Calculate max positions to ensure the button stays within the wrapper
+  const maxX = wrapperRect.width - noBtnRect.width;
+  const maxY = wrapperRect.height - noBtnRect.height;
 
-    // Generar datos paramétricos para las flores
-    const data = {
-        datasets: [{
-            label: 'Flores',
-            borderColor: 'yellow',
-            borderWidth: 3,
-            fill: false,
-            data: generateFlowerData()
-        }]
-    };
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
 
-    // Crear el gráfico con Chart.js
-    new Chart(ctx, {
-        type: 'scatter',
-        data: data,
-        options: {
-            scales: {
-                x: {
-                    type: 'linear',
-                    position: 'bottom',
-                    min: -2,
-                    max: 2
-                },
-                y: {
-                    min: -2,
-                    max: 2
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                }
-            }
-        }
-    });
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
 });
-
-// Función para generar los puntos que dibujan una flor
-function generateFlowerData() {
-    const points = [];
-    const numPetals = 7; // Número de pétalos
-    const steps = 1000; // Cantidad de puntos en la curva
-    for (let i = 0; i < steps; i++) {
-        const t = (i / steps) * 2 * Math.PI;
-        const r = Math.sin(numPetals * t); // Función radial
-        const x = r * Math.cos(t); // Coordenada x
-        const y = r * Math.sin(t); // Coordenada y
-        points.push({ x: x, y: y });
-    }
-    return points;
-}
