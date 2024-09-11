@@ -11,26 +11,26 @@ body {
     align-items: center;
     min-height: 100vh;
     background: whitesmoke;
-    overflow: hidden; /* Asegura que no haya barras de desplazamiento */
-    position: relative; /* Necesario para posicionar el contenedor del GIF */
+    overflow: hidden;
+    position: relative;
 }
 
 /* Contenedor para el GIF de fondo */
 #flower-container {
-    position: absolute;
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Asegura que el GIF esté en el fondo */
-    pointer-events: none; /* El contenedor no debería interceptar eventos de mouse */
+    width: 100vw; 
+    height: 100vh; 
+    z-index: 0; 
+    pointer-events: none; 
 }
 
 /* GIF de fondo */
 #flower-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el GIF cubra todo el contenedor sin deformarse */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +42,7 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
-    z-index: 1; /* Asegura que el contenido principal esté por encima del fondo */
+    z-index: 1;
 }
 
 h2 {
