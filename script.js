@@ -3,25 +3,6 @@ const noBtn = document.querySelector(".no-btn");
 const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 
-// Código para el fondo de flores
-function createFlower() {
-    const flower = document.createElement('div');
-    flower.classList.add('flower');
-    
-    flower.style.left = Math.random() * 100 + 'vw';
-    flower.style.animationDuration = Math.random() * 3 + 2 + 's'; // Entre 2 y 5 segundos
-    flower.style.animationDelay = Math.random() * 5 + 's'; // Hasta 5 segundos de retraso
-    
-    document.getElementById('flower-container').appendChild(flower);
-
-    setTimeout(() => {
-        flower.remove();
-    }, 7000); // Ajusta este tiempo según la duración de la animación
-}
-
-// Crear flores de manera continua
-setInterval(createFlower, 300); // Cada 300ms se genera una flor nueva
-
 let isYesBtnActive = false; // Variable para controlar si el botón "Sí" está activo o no
 
 // Cambiar estado del yesBtn
