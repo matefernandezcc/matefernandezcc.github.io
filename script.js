@@ -11,8 +11,8 @@ yesBtn.addEventListener("click", () => {
     isYesBtnActive = true;
     return;
   }
-  question.innerHTML = "Lo sabía 😇";
-  gif.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmZxOHZyOXNhZHdmMGt0dXNzd2xobzR4aTd0anR0Mmo2YzNxOWYzcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMVVnPqbKhnc3Fm/giphy.gif";
+  // Redirigir a la página cuando el botón "Sí" está activo
+  window.location.href = "https://matefernandezcc.github.io/agus/";
 });
 
 // Mover el noBtn
