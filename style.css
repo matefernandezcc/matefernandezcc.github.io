@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: whitesmoke;
+    background: #ea899b5e;
     overflow: hidden;
     position: relative;
 }
@@ -22,7 +22,7 @@ body {
     left: 0;
     width: 100vw; 
     height: 100vh; 
-    z-index: 0; 
+    z-index: 3; 
     pointer-events: none; 
 }
 
@@ -45,9 +45,15 @@ body {
     z-index: 1;
 }
 
+h1 {
+    font-size: 2em;
+    color: #8d5f62;
+    margin: 15px 0;
+}
+
 h2 {
     font-size: 2em;
-    color: #e94d58;
+    color: #ac4047;
     margin: 15px 0;
 }
 

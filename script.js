@@ -4,6 +4,7 @@ const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 
 let isYesBtnActive = false; // Variable para controlar si el botón "Sí" está activo o no
+let noBtnClickCount = 0; // Contador para limitar el número de clicks en el botón "No"
 
 // Cambiar estado del yesBtn
 yesBtn.addEventListener("click", () => {
@@ -12,28 +13,32 @@ yesBtn.addEventListener("click", () => {
     return;
   }
   // Redirigir a la página cuando el botón "Sí" está activo
-  window.location.href = "https://matefernandezcc.github.io/agus/";
+  window.location.href = 'carta.html';
 });
 
-// Mover el noBtn
-function moveNoBtn() {
-  const wrapper = document.querySelector(".wrapper");
-  const wrapperRect = wrapper.getBoundingClientRect();
-  const noBtnRect = noBtn.getBoundingClientRect();
+// Mover el botón "No" a una nueva posición dentro de los límites de la pantalla
+noBtn.addEventListener("click", () => {
+  if (noBtnClickCount < 3) {
+    noBtnClickCount++;
 
-  const maxX = wrapperRect.width - noBtnRect.width;
-  const maxY = wrapperRect.height - noBtnRect.height;
+    // Asegurar que el botón "No" no se salga de los límites visibles
+    noBtn.style.width = `${noBtn.offsetWidth - 25}px`;
+    noBtn.style.height = `${noBtn.offsetHeight - 1}px`;
 
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
+    // Aumentar el tamaño del botón "Yes"
+    yesBtn.style.width = `${yesBtn.offsetWidth + 20}px`;
+    yesBtn.style.height = `${yesBtn.offsetHeight + 20}px`;
 
-  noBtn.style.left = randomX + "px";
-  noBtn.style.top = randomY + "px";
-}
+  } else {
+    setTimeout(() => {
+      window.location.href = 'carta.html';
+    }, 2000);
+  }
+});
 
-// Make the No button move randomly on hover (for desktop) or touch (for mobile)
-noBtn.addEventListener("mouseover", moveNoBtn);
-noBtn.addEventListener("touchstart", (e) => {
-  e.preventDefault(); // Prevenir que el evento se propague al botón "Sí"
-  moveNoBtn();
+
+yesBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    window.location.href = 'carta.html';
+  }, 2000);
 });
