@@ -29,14 +29,26 @@ noBtn.addEventListener("click", () => {
     yesBtn.style.width = `${yesBtn.offsetWidth + 20}px`;
     yesBtn.style.height = `${yesBtn.offsetHeight + 20}px`;
 
+    // Cambiar el texto según el número de clics
+    if (noBtnClickCount === 1) {
+      noBtn.textContent = "Eh";
+    } else if (noBtnClickCount === 2) {
+      noBtn.textContent = "¿Apretaste mal?";
+    } else if (noBtnClickCount === 3) {
+      noBtn.textContent = "mmmm";
+    }
+    
+    
   } else {
+    // Cuando se llega al cuarto clic, cambiar el texto a "Siiiii"
+    noBtn.textContent = "bue...";
     setTimeout(() => {
       window.location.href = 'carta.html';
     }, 2000);
   }
 });
 
-
+// Lógica para el botón "Sí"
 yesBtn.addEventListener("click", () => {
   setTimeout(() => {
     window.location.href = 'carta.html';

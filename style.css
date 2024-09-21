@@ -82,12 +82,14 @@ button {
 
 button.yes-btn {
     background: #e94d58;
+    position: absolute;
+    left: 10%;
 }
 
 button.no-btn {
     background: white;
     color: #e94d58;
     position: absolute;
-    left: 50%;
+    left: 70%;
     transform: translateX(-50%);
 }
