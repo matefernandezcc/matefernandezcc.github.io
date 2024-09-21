@@ -120,7 +120,7 @@ body{
     top: 40%;
     color: #fff;
     font-size: 40px;
-    font-family: 'Felipa', cursive;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     perspective: 400;
     code, [data-char="x"]{
       font-size: 18px;
