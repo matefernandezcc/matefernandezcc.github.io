@@ -946,8 +946,8 @@ main {
 
 .project-img {
   position: relative;
-  width: 25vh;
-  height: 25vh;
+  width: 100%;
+  height: 200px;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -958,8 +958,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25vh;
-  height: 25vh;
+  width: 100%;
+  height: 100%;
   background: transparent;
   z-index: 1;
   transition: var(--transition-1);
@@ -992,8 +992,8 @@ main {
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
 .project-img img {
-  width: 25vh;
-  height: 25vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
 }
