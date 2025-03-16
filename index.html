@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="shortcut icon" href="./assets/images/world.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" width="80" class="perfil">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mateo Fernandez">Mateo Fernandez</h1>
+
+          <p class="title">Systems Engineer Student</p>
+          <p>ㅤ</p>
+          <p class="title">Fullstack Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Contacto</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:matefernandezc@gmail.com" class="contact-link">matefernandezc@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Linkedin</p>
+              <a href="https://www.linkedin.com/in/matefernandezc/" class="contact-link">https://www.linkedin.com/in/matefernandezc/</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Cumpleaños</p>
+              <time datetime="1982-06-23">July 23, 2003</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>CABA, Buenos Aires, Argentina</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/matefernandezcc" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.instagram.com/matefernandezc/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- //////////////////////////////// ABOUT ME //////////////////////////////// -->
+      <article class="about  active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am an Information Systems Engineering student at the National Technological University of Buenos Aires.
+            I love to learn new things and keep training myself in the programming field, also enjoy studying mathematics in my spare time.
+            I am a resolute, organized, perseverant, self-taught, and fast learner.
+          </p>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">Tech Knowledge</h3>
+            <p align="center">
+              <img 
+                      src="https://skillicons.dev/icons?i=github,git,notion,postman,maven,docker,figma,linux,bash,mysql,postgres,py,java,c,haskell,lua,php,js,html,css,tailwind,react,angular,svg,neovim,vscode,regex,md,laravel"
+                      alt="Skills Icons"
+                      className="w-auto h-50"
+                    />
+            </p>
+        </section>
+        
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Learning</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/rust.svg
+                " alt="rust icon" width="75">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Rust</h4>
+                <p class="service-item-text">
+                  The Rust Programming Language.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/aws.png" alt="Web development icon" width="75">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AWS</h4>
+                <p class="service-item-text">
+                  Preparing AWS Solutions Architect exam.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/kubernetes.png" alt="mobile app icon" width="75">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Kubernetes</h4>
+                <p class="service-item-text">
+                  Software that manages and scales containerized applications.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/Latex.svg" alt="camera icon" width="75">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Latex</h4>
+                <p class="service-item-text">
+                  Some Latex for college notes.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <button class="modal-close-btn" data-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+      </article>
+
+      <!-- //////////////////////////////// RESUME //////////////////////////////// -->
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">University National of Technology (UTN)</h4>
+              <span>2022 — 2027</span>
+              <p class="timeline-text">
+                Advanced student of Information Systems Engineering, currently in the 3rd year of the course (out of 5 in total).
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Benito Nazar High school</h4>
+              <span>2016 — 2021</span>
+              <p class="timeline-text">
+                Bachelor's degree in economics and administration.
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience & Certifications</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">AWS Machine Learning Foundations</h4>
+              <span>March 2025</span>
+              <p class="timeline-text">
+                Demonstrated the ability to discuss the fundamental concepts of machine learning and how to apply the machine learning pipeline to solve a business problem.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Administrative Assistant</h4>
+              <span>March 2023 — November 2023</span>
+              <p class="timeline-text">
+                Invoicing medical fees and generation of payment orders at Hospital Italiano de Buenos Aires.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Billing Assistant</h4>
+              <span>January 2023</span>
+              <p class="timeline-text">
+                Inpatient and outpatient billing (pensions and services) at Hospital Italiano de Buenos Aires.
+              </p>
+            </li>
+          </ol>
+        </section>
+      </article>
+
+
+      <!-- //////////////////////////////// PROJECTOS //////////////////////////////// -->
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+        <section class="projects">
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Integrations</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web and Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Misc</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Integrations</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web and Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Misc</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="integrations">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/RTGPS.png" loading="lazy">
+                </figure>
+                <h3 class="project-title">Bus Real Time GPS</h3>
+                <p class="project-category">Integrations</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web and applications">
+              <a href="https://matefernandezcc.github.io/Seterra-BuenosAires/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/bsterra.png" loading="lazy">
+                </figure>
+                <h3 class="project-title">Seterra for Buenos Aires</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="integrations">
+              <a href="https://github.com/matefernandezcc/SaldoSube-for-Alexa">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/SaldoSube.png" loading="lazy">
+                </figure>
+                <h3 class="project-title">Saldo Sube for Alexa</h3>
+                <p class="project-category">Integrations</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="integrations">
+              <a href="https://github.com/matefernandezcc/CuandoSubo-for-Alexa">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/CuandoSubo.png" loading="lazy">
+                </figure>
+                <h3 class="project-title">Cuando Subo for Alexa</h3>
+                <p class="project-category">Integrations</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="misc">
+              <a href="https://github.com/matefernandezcc/congruence-Calculator">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/CongruenceEQ.jpg" loading="lazy">
+                </figure>
+                <h3 class="project-title">Congruence Equations Solver</h3>
+                <p class="project-category">Math</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="misc">
+              <a href="https://github.com/matefernandezcc/flappy-bird">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/FlappyBird.webp" loading="lazy">
+                </figure>
+                <h3 class="project-title">Flappy Bird in Java</h3>
+                <p class="project-category">Learning Java</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="misc">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Convolutions.jpeg" alt="summary" loading="lazy">
+                </figure>
+                <h3 class="project-title">Gaussian Blur using Convolutions</h3>
+                <p class="project-category">Math</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web and applications">
+              <a href="https://github.com/matefernandezcc/code/tree/main/SSL/04-MicroC">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/yacc.png" alt="yacc image" loading="lazy">
+                </figure>
+                <h3 class="project-title">Micro C Compiler</h3>
+                <p class="project-category">Applications</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web and applications">
+              <a href="https://github.com/matefernandezcc/code/tree/main/SSL/02-Automatas">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/automata.jpeg" loading="lazy">
+                </figure>
+                <h3 class="project-title">Top Down Parser</h3>
+                <p class="project-category">Applications</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- //////////////////////////////// CONTACT //////////////////////////////// -->
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52551.151544688495!2d-58.53297833402952!3d-34.6156543275225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb60f67b42e6f%3A0x41953c6c3f1c83fa!2sBuenos%20Aires!5e0!3m2!1sen!2sar!4v1710448209001"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
